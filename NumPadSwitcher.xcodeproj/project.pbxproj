@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		273EA40B266F0724003E06B8 /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273EA40A266F0724003E06B8 /* HotKey.swift */; };
+		273EA413266F0F67003E06B8 /* HotKeyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273EA412266F0F67003E06B8 /* HotKeyGrid.swift */; };
+		273EA416266F0FD7003E06B8 /* Config.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 273EA414266F0FD7003E06B8 /* Config.xcdatamodeld */; };
+		27994FA3266D1E6C00447130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27994FA2266D1E6C00447130 /* AppDelegate.swift */; };
+		27994FA5266D1E6C00447130 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27994FA4266D1E6C00447130 /* ContentView.swift */; };
+		27994FA7266D1E6D00447130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27994FA6266D1E6D00447130 /* Assets.xcassets */; };
+		27994FAA266D1E6D00447130 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27994FA9266D1E6D00447130 /* Preview Assets.xcassets */; };
+		27994FAD266D1E6D00447130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27994FAB266D1E6D00447130 /* Main.storyboard */; };
+		27994FB7266DB61500447130 /* RegisterHotKeys.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27994FB6266DB61500447130 /* RegisterHotKeys.mm */; };
+		27994FBB266DB80D00447130 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27994FBA266DB80D00447130 /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		273EA40A266F0724003E06B8 /* HotKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKey.swift; sourceTree = "<group>"; };
+		273EA412266F0F67003E06B8 /* HotKeyGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyGrid.swift; sourceTree = "<group>"; };
+		273EA415266F0FD7003E06B8 /* Config.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Config.xcdatamodel; sourceTree = "<group>"; };
+		27994F9F266D1E6C00447130 /* NumPadSwitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumPadSwitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27994FA2266D1E6C00447130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27994FA4266D1E6C00447130 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		27994FA6266D1E6D00447130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27994FA9266D1E6D00447130 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		27994FAC266D1E6D00447130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27994FAE266D1E6D00447130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27994FB5266DB61400447130 /* NumPadSwitcher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NumPadSwitcher-Bridging-Header.h"; sourceTree = "<group>"; };
+		27994FB6266DB61500447130 /* RegisterHotKeys.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RegisterHotKeys.mm; sourceTree = "<group>"; };
+		27994FB8266DB62700447130 /* RegisterHotKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterHotKeys.h; sourceTree = "<group>"; };
+		27994FBA266DB80D00447130 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27994F9C266D1E6C00447130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27994FBB266DB80D00447130 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		273EA40C266F0925003E06B8 /* HotKey */ = {
+			isa = PBXGroup;
+			children = (
+				273EA40A266F0724003E06B8 /* HotKey.swift */,
+				273EA412266F0F67003E06B8 /* HotKeyGrid.swift */,
+			);
+			path = HotKey;
+			sourceTree = "<group>";
+		};
+		273EA40D266F0934003E06B8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				273EA40C266F0925003E06B8 /* HotKey */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		27994F96266D1E6C00447130 = {
+			isa = PBXGroup;
+			children = (
+				27994FA1266D1E6C00447130 /* NumPadSwitcher */,
+				27994FA0266D1E6C00447130 /* Products */,
+				27994FB9266DB80D00447130 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		27994FA0266D1E6C00447130 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27994F9F266D1E6C00447130 /* NumPadSwitcher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27994FA1266D1E6C00447130 /* NumPadSwitcher */ = {
+			isa = PBXGroup;
+			children = (
+				273EA40D266F0934003E06B8 /* UI */,
+				27994FA2266D1E6C00447130 /* AppDelegate.swift */,
+				27994FA4266D1E6C00447130 /* ContentView.swift */,
+				27994FA6266D1E6D00447130 /* Assets.xcassets */,
+				273EA414266F0FD7003E06B8 /* Config.xcdatamodeld */,
+				27994FAB266D1E6D00447130 /* Main.storyboard */,
+				27994FAE266D1E6D00447130 /* Info.plist */,
+				27994FA8266D1E6D00447130 /* Preview Content */,
+				27994FB6266DB61500447130 /* RegisterHotKeys.mm */,
+				27994FB8266DB62700447130 /* RegisterHotKeys.h */,
+				27994FB5266DB61400447130 /* NumPadSwitcher-Bridging-Header.h */,
+			);
+			path = NumPadSwitcher;
+			sourceTree = "<group>";
+		};
+		27994FA8266D1E6D00447130 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				27994FA9266D1E6D00447130 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		27994FB9266DB80D00447130 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27994FBA266DB80D00447130 /* Carbon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27994F9E266D1E6C00447130 /* NumPadSwitcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27994FB2266D1E6D00447130 /* Build configuration list for PBXNativeTarget "NumPadSwitcher" */;
+			buildPhases = (
+				27994F9B266D1E6C00447130 /* Sources */,
+				27994F9C266D1E6C00447130 /* Frameworks */,
+				27994F9D266D1E6C00447130 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NumPadSwitcher;
+			productName = NumPadSwitcher;
+			productReference = 27994F9F266D1E6C00447130 /* NumPadSwitcher.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27994F97266D1E6C00447130 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					27994F9E266D1E6C00447130 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+				};
+			};
+			buildConfigurationList = 27994F9A266D1E6C00447130 /* Build configuration list for PBXProject "NumPadSwitcher" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27994F96266D1E6C00447130;
+			productRefGroup = 27994FA0266D1E6C00447130 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27994F9E266D1E6C00447130 /* NumPadSwitcher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27994F9D266D1E6C00447130 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27994FAD266D1E6D00447130 /* Main.storyboard in Resources */,
+				27994FAA266D1E6D00447130 /* Preview Assets.xcassets in Resources */,
+				27994FA7266D1E6D00447130 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27994F9B266D1E6C00447130 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27994FA5266D1E6C00447130 /* ContentView.swift in Sources */,
+				27994FB7266DB61500447130 /* RegisterHotKeys.mm in Sources */,
+				273EA413266F0F67003E06B8 /* HotKeyGrid.swift in Sources */,
+				273EA40B266F0724003E06B8 /* HotKey.swift in Sources */,
+				27994FA3266D1E6C00447130 /* AppDelegate.swift in Sources */,
+				273EA416266F0FD7003E06B8 /* Config.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		27994FAB266D1E6D00447130 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27994FAC266D1E6D00447130 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27994FB0266D1E6D00447130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		27994FB1266D1E6D00447130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		27994FB3266D1E6D00447130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NumPadSwitcher/NumPadSwitcher.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"NumPadSwitcher/Preview Content\"";
+				DEVELOPMENT_TEAM = 26P5T8RYVG;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NumPadSwitcher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikemaxim.NumPadSwitcher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NumPadSwitcher/NumPadSwitcher-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		27994FB4266D1E6D00447130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NumPadSwitcher/NumPadSwitcher.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"NumPadSwitcher/Preview Content\"";
+				DEVELOPMENT_TEAM = 26P5T8RYVG;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NumPadSwitcher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikemaxim.NumPadSwitcher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NumPadSwitcher/NumPadSwitcher-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27994F9A266D1E6C00447130 /* Build configuration list for PBXProject "NumPadSwitcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27994FB0266D1E6D00447130 /* Debug */,
+				27994FB1266D1E6D00447130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27994FB2266D1E6D00447130 /* Build configuration list for PBXNativeTarget "NumPadSwitcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27994FB3266D1E6D00447130 /* Debug */,
+				27994FB4266D1E6D00447130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		273EA414266F0FD7003E06B8 /* Config.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				273EA415266F0FD7003E06B8 /* Config.xcdatamodel */,
+			);
+			currentVersion = 273EA415266F0FD7003E06B8 /* Config.xcdatamodel */;
+			path = Config.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 27994F97266D1E6C00447130 /* Project object */;
+}
