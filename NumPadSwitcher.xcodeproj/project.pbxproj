@@ -10,22 +10,32 @@
 		273EA40B266F0724003E06B8 /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273EA40A266F0724003E06B8 /* HotKey.swift */; };
 		273EA413266F0F67003E06B8 /* HotKeyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273EA412266F0F67003E06B8 /* HotKeyGrid.swift */; };
 		273EA416266F0FD7003E06B8 /* Config.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 273EA414266F0FD7003E06B8 /* Config.xcdatamodeld */; };
+		27727E3A26D95D0900EE0EBB /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27727E3926D95D0900EE0EBB /* ConfigView.swift */; };
+		27727E3C26D95D6600EE0EBB /* AppConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27727E3B26D95D6600EE0EBB /* AppConfigView.swift */; };
+		27727E3E26D95D7600EE0EBB /* HotKeyConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27727E3D26D95D7600EE0EBB /* HotKeyConfigView.swift */; };
+		27727E4026D9620800EE0EBB /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27727E3F26D9620800EE0EBB /* AppHelper.swift */; };
+		27727E4226D9DB5500EE0EBB /* TextFieldDebounced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27727E4126D9DB5500EE0EBB /* TextFieldDebounced.swift */; };
 		27994FA3266D1E6C00447130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27994FA2266D1E6C00447130 /* AppDelegate.swift */; };
-		27994FA5266D1E6C00447130 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27994FA4266D1E6C00447130 /* ContentView.swift */; };
 		27994FA7266D1E6D00447130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27994FA6266D1E6D00447130 /* Assets.xcassets */; };
 		27994FAA266D1E6D00447130 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27994FA9266D1E6D00447130 /* Preview Assets.xcassets */; };
 		27994FAD266D1E6D00447130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27994FAB266D1E6D00447130 /* Main.storyboard */; };
 		27994FB7266DB61500447130 /* RegisterHotKeys.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27994FB6266DB61500447130 /* RegisterHotKeys.mm */; };
 		27994FBB266DB80D00447130 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27994FBA266DB80D00447130 /* Carbon.framework */; };
+		279B017326D810A0003711AF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B017226D810A0003711AF /* Model.swift */; };
+		279B017626D811EE003711AF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B017526D811EE003711AF /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		273EA40A266F0724003E06B8 /* HotKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKey.swift; sourceTree = "<group>"; };
 		273EA412266F0F67003E06B8 /* HotKeyGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyGrid.swift; sourceTree = "<group>"; };
 		273EA415266F0FD7003E06B8 /* Config.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Config.xcdatamodel; sourceTree = "<group>"; };
+		27727E3926D95D0900EE0EBB /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		27727E3B26D95D6600EE0EBB /* AppConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigView.swift; sourceTree = "<group>"; };
+		27727E3D26D95D7600EE0EBB /* HotKeyConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyConfigView.swift; sourceTree = "<group>"; };
+		27727E3F26D9620800EE0EBB /* AppHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
+		27727E4126D9DB5500EE0EBB /* TextFieldDebounced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDebounced.swift; sourceTree = "<group>"; };
 		27994F9F266D1E6C00447130 /* NumPadSwitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumPadSwitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27994FA2266D1E6C00447130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27994FA4266D1E6C00447130 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		27994FA6266D1E6D00447130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27994FA9266D1E6D00447130 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27994FAC266D1E6D00447130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +44,8 @@
 		27994FB6266DB61500447130 /* RegisterHotKeys.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RegisterHotKeys.mm; sourceTree = "<group>"; };
 		27994FB8266DB62700447130 /* RegisterHotKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterHotKeys.h; sourceTree = "<group>"; };
 		27994FBA266DB80D00447130 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		279B017226D810A0003711AF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		279B017526D811EE003711AF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +72,23 @@
 		273EA40D266F0934003E06B8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				27994FA2266D1E6C00447130 /* AppDelegate.swift */,
+				27727E3F26D9620800EE0EBB /* AppHelper.swift */,
+				27727E4126D9DB5500EE0EBB /* TextFieldDebounced.swift */,
+				27727E3826D95CEE00EE0EBB /* Config */,
 				273EA40C266F0925003E06B8 /* HotKey */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		27727E3826D95CEE00EE0EBB /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				27727E3B26D95D6600EE0EBB /* AppConfigView.swift */,
+				27727E3D26D95D7600EE0EBB /* HotKeyConfigView.swift */,
+				27727E3926D95D0900EE0EBB /* ConfigView.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		27994F96266D1E6C00447130 = {
@@ -85,16 +111,14 @@
 		27994FA1266D1E6C00447130 /* NumPadSwitcher */ = {
 			isa = PBXGroup;
 			children = (
+				279B017126D8108F003711AF /* Data */,
 				273EA40D266F0934003E06B8 /* UI */,
-				27994FA2266D1E6C00447130 /* AppDelegate.swift */,
-				27994FA4266D1E6C00447130 /* ContentView.swift */,
+				279B017826D8159E003711AF /* HotKeys */,
 				27994FA6266D1E6D00447130 /* Assets.xcassets */,
 				273EA414266F0FD7003E06B8 /* Config.xcdatamodeld */,
 				27994FAB266D1E6D00447130 /* Main.storyboard */,
 				27994FAE266D1E6D00447130 /* Info.plist */,
 				27994FA8266D1E6D00447130 /* Preview Content */,
-				27994FB6266DB61500447130 /* RegisterHotKeys.mm */,
-				27994FB8266DB62700447130 /* RegisterHotKeys.h */,
 				27994FB5266DB61400447130 /* NumPadSwitcher-Bridging-Header.h */,
 			);
 			path = NumPadSwitcher;
@@ -114,6 +138,24 @@
 				27994FBA266DB80D00447130 /* Carbon.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		279B017126D8108F003711AF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				279B017226D810A0003711AF /* Model.swift */,
+				279B017526D811EE003711AF /* Persistence.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		279B017826D8159E003711AF /* HotKeys */ = {
+			isa = PBXGroup;
+			children = (
+				27994FB6266DB61500447130 /* RegisterHotKeys.mm */,
+				27994FB8266DB62700447130 /* RegisterHotKeys.h */,
+			);
+			path = HotKeys;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,11 +229,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27994FA5266D1E6C00447130 /* ContentView.swift in Sources */,
+				27727E3C26D95D6600EE0EBB /* AppConfigView.swift in Sources */,
+				27727E4226D9DB5500EE0EBB /* TextFieldDebounced.swift in Sources */,
+				279B017326D810A0003711AF /* Model.swift in Sources */,
+				279B017626D811EE003711AF /* Persistence.swift in Sources */,
+				27727E3E26D95D7600EE0EBB /* HotKeyConfigView.swift in Sources */,
+				27727E3A26D95D0900EE0EBB /* ConfigView.swift in Sources */,
 				27994FB7266DB61500447130 /* RegisterHotKeys.mm in Sources */,
 				273EA413266F0F67003E06B8 /* HotKeyGrid.swift in Sources */,
 				273EA40B266F0724003E06B8 /* HotKey.swift in Sources */,
 				27994FA3266D1E6C00447130 /* AppDelegate.swift in Sources */,
+				27727E4026D9620800EE0EBB /* AppHelper.swift in Sources */,
 				273EA416266F0FD7003E06B8 /* Config.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,7 +392,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikemaxim.NumPadSwitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NumPadSwitcher/NumPadSwitcher-Bridging-Header.h";
@@ -372,7 +420,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikemaxim.NumPadSwitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NumPadSwitcher/NumPadSwitcher-Bridging-Header.h";

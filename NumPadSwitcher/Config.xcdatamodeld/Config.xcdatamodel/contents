@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Apps" representedClassName="Apps" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="HotKey" representedClassName="HotKey" syncable="YES" codeGenerationType="class">
         <attribute name="app" optional="YES" attributeType="String"/>
-        <attribute name="slotID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-    </entity>
-    <entity name="HotKeys" representedClassName="HotKeys" syncable="YES" codeGenerationType="class">
-        <attribute name="key" optional="YES" attributeType="String"/>
-        <attribute name="mod" optional="YES" attributeType="String"/>
+        <attribute name="key" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="mod" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="slotID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Apps" positionX="-63" positionY="-18" width="128" height="59"/>
-        <element name="HotKeys" positionX="-54" positionY="9" width="128" height="74"/>
+        <element name="HotKey" positionX="-54" positionY="9" width="128" height="89"/>
     </elements>
 </model>

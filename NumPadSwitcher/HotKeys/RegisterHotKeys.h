@@ -24,3 +24,9 @@
 - (void)registerHotKeys;
 
 @end
+
+@interface HotKeyConverter : NSObject
+
++ (NSString*)keyCodeToString:(UInt32)keyCode;
+
+@end

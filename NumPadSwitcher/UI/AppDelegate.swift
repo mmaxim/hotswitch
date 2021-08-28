@@ -11,13 +11,12 @@ import Carbon
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
-  
   var window: NSWindow!
-  
+  var hotkeyModel = HotKeyModel()
   
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    // Create the SwiftUI view that provides the window contents.
-    let contentView = ContentView()
+    let mainView = HotKeyGrid()
+      .environmentObject(hotkeyModel)
     
     // Create the window and set the content view.
     window = NSWindow(
@@ -27,7 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
     window.isReleasedWhenClosed = false
     window.center()
     window.setFrameAutosaveName("Main Window")
-    window.contentView = NSHostingView(rootView: contentView)
+    window.contentView = NSHostingView(rootView: mainView)
     window.makeKeyAndOrderFront(nil)
     
     let options : NSDictionary = [kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString: true]

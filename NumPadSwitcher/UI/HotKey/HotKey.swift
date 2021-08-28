@@ -25,16 +25,7 @@ struct HotKeyView: View {
       } else {
         Text("<no hotkey set>")
       }
-      Divider()
-      VStack {
-        HStack {
-          Button((app != nil) ? "Modify app" : "Add app"){}
-          Button((key != nil) ? "Modify hotkey" : "Add hotkey"){}
-        }
-        Spacer().frame(height: 20)
-        Button("Clear") {}
-      }
-    }.frame(width: 200, height: 200)
+    }.frame(width: 200, height: 100)
   }
   
 }
