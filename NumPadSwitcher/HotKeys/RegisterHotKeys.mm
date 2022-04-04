@@ -91,6 +91,9 @@ public:
 }
 
 - (void) registerHotKey:(HotKeyBridge*)hotKey {
+  if (hotKey.keyCode < 0) {
+    return;
+  }
   EventHotKeyID hotKeyID;
   hotKeyID.signature = 'knps' + hotKey.keyCode + hotKey.mod;
   hotKeyID.id = static_cast<int>(registeredKeys.size());

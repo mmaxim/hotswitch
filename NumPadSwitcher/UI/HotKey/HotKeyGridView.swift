@@ -24,18 +24,18 @@ struct HotKeyGrid: View {
   
   var body: some View {
     ScrollView {
-      LazyVGrid(columns: columns, spacing: 20) {
+      LazyVGrid(columns: columns) {
         ForEach(hotkeyModel.hotKeys, id: \.self) { hotKey in
           Button(action: {
             activeConfigSlotInfo = ActiveConfigSlotIDInfo(slotID: Int(hotKey.slotID))
           } , label: {
-            HotKeyView(app: hotKey.app?.isEmpty ?? true ? "<not set>" : hotKey.app,
-                       key: HotKeyConverter.keyCode(toString: hotKey.key, andMod: hotKey.mod))
+            HotKeyView(appName: hotKey.app!, key: hotKey.key, mod: hotKey.mod)
           }).buttonStyle(PlainButtonStyle())
         }
       }
       .padding(.horizontal)
     }
+    .padding()
     .frame(width: 600, height: 350)
     .sheet(item: $activeConfigSlotInfo) { item in
       AppConfigView(slotID: item.slotID) {

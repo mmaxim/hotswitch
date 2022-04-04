@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		273EA40B266F0724003E06B8 /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273EA40A266F0724003E06B8 /* HotKey.swift */; };
-		273EA413266F0F67003E06B8 /* HotKeyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273EA412266F0F67003E06B8 /* HotKeyGrid.swift */; };
+		273EA40B266F0724003E06B8 /* HotKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273EA40A266F0724003E06B8 /* HotKeyView.swift */; };
+		273EA413266F0F67003E06B8 /* HotKeyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273EA412266F0F67003E06B8 /* HotKeyGridView.swift */; };
 		273EA416266F0FD7003E06B8 /* Config.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 273EA414266F0FD7003E06B8 /* Config.xcdatamodeld */; };
 		27727E3C26D95D6600EE0EBB /* AppConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27727E3B26D95D6600EE0EBB /* AppConfigView.swift */; };
 		27727E3E26D95D7600EE0EBB /* HotKeyConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27727E3D26D95D7600EE0EBB /* HotKeyConfigView.swift */; };
@@ -25,8 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		273EA40A266F0724003E06B8 /* HotKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKey.swift; sourceTree = "<group>"; };
-		273EA412266F0F67003E06B8 /* HotKeyGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyGrid.swift; sourceTree = "<group>"; };
+		273EA40A266F0724003E06B8 /* HotKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyView.swift; sourceTree = "<group>"; };
+		273EA412266F0F67003E06B8 /* HotKeyGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyGridView.swift; sourceTree = "<group>"; };
 		273EA415266F0FD7003E06B8 /* Config.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Config.xcdatamodel; sourceTree = "<group>"; };
 		27727E3B26D95D6600EE0EBB /* AppConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigView.swift; sourceTree = "<group>"; };
 		27727E3D26D95D7600EE0EBB /* HotKeyConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyConfigView.swift; sourceTree = "<group>"; };
@@ -61,8 +61,8 @@
 		273EA40C266F0925003E06B8 /* HotKey */ = {
 			isa = PBXGroup;
 			children = (
-				273EA40A266F0724003E06B8 /* HotKey.swift */,
-				273EA412266F0F67003E06B8 /* HotKeyGrid.swift */,
+				273EA40A266F0724003E06B8 /* HotKeyView.swift */,
+				273EA412266F0F67003E06B8 /* HotKeyGridView.swift */,
 			);
 			path = HotKey;
 			sourceTree = "<group>";
@@ -232,8 +232,8 @@
 				279B017626D811EE003711AF /* Persistence.swift in Sources */,
 				27727E3E26D95D7600EE0EBB /* HotKeyConfigView.swift in Sources */,
 				27994FB7266DB61500447130 /* RegisterHotKeys.mm in Sources */,
-				273EA413266F0F67003E06B8 /* HotKeyGrid.swift in Sources */,
-				273EA40B266F0724003E06B8 /* HotKey.swift in Sources */,
+				273EA413266F0F67003E06B8 /* HotKeyGridView.swift in Sources */,
+				273EA40B266F0724003E06B8 /* HotKeyView.swift in Sources */,
 				27994FA3266D1E6C00447130 /* AppDelegate.swift in Sources */,
 				27727E4026D9620800EE0EBB /* AppHelper.swift in Sources */,
 				273EA416266F0FD7003E06B8 /* Config.xcdatamodeld in Sources */,

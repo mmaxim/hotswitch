@@ -11,6 +11,7 @@ import Cocoa
 struct AppDesc : Equatable {
   var name: String
   var icon: NSImage?
+  var bigIcon: NSImage?
   
   static func == (lhs: AppDesc, rhs: AppDesc) -> Bool {
     return lhs.name == rhs.name
@@ -24,7 +25,9 @@ class AppHelper {
     let apps = NSWorkspace.shared.runningApplications
     var ret : [AppDesc] = []
     for app in apps {
-      ret.append(AppDesc(name: app.localizedName ?? "<unknown>", icon: app.icon))
+      let bigIcon = app.icon?.copy() as! NSImage?
+      bigIcon?.size = NSMakeSize(64,64)
+      ret.append(AppDesc(name: app.localizedName ?? "<unknown>", icon: app.icon, bigIcon: bigIcon))
     }
     ret.sort { return $0.name < $1.name }
     return ret
@@ -41,3 +44,4 @@ class AppHelper {
   
   private init() {}
 }
+
