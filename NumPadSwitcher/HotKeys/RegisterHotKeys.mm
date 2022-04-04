@@ -52,19 +52,6 @@ public:
   return hkr;
 }
 
-- (void) setDelegate:(id<HotKeysRegistrarDelegate>)delegate {
-  _delegate = delegate;
-  std::array<EventTypeSpec, 2> eventTypes;
-  eventTypes[0].eventClass = kEventClassKeyboard;
-  eventTypes[0].eventKind = kEventHotKeyPressed;
-  auto status = InstallApplicationEventHandler(hotKeyHandler, eventTypes.size(), eventTypes.data(),
-                                               (__bridge void*)self, NULL);
-  if (status != noErr) {
-    NSLog(@"failed to install event handler: %d", status);
-    return;
-  }
-}
-
 - (void) syncHotKeys:(NSArray*)hotKeys {
   // clear current hot keys
   for (const auto& registeredKey : registeredKeys) {
@@ -75,6 +62,16 @@ public:
   // register new set of hot keys
   for (HotKeyBridge* hotKey in hotKeys) {
     [self registerHotKey:hotKey];
+  }
+  
+  std::array<EventTypeSpec, 2> eventTypes;
+  eventTypes[0].eventClass = kEventClassKeyboard;
+  eventTypes[0].eventKind = kEventHotKeyPressed;
+  auto status = InstallApplicationEventHandler(hotKeyHandler, eventTypes.size(), eventTypes.data(),
+                                               (__bridge void*)self, NULL);
+  if (status != noErr) {
+    NSLog(@"failed to install event handler: %d", status);
+    return;
   }
 }
 
@@ -98,7 +95,8 @@ public:
   hotKeyID.signature = 'knps' + hotKey.keyCode + hotKey.mod;
   hotKeyID.id = static_cast<int>(registeredKeys.size());
   EventHotKeyRef hotKeyRef;
-  auto status = RegisterEventHotKey(hotKey.keyCode, hotKey.mod, hotKeyID, GetApplicationEventTarget(), 0, &hotKeyRef);
+  auto status = RegisterEventHotKey(hotKey.keyCode, hotKey.mod, hotKeyID, GetApplicationEventTarget(),
+                                    0, &hotKeyRef);
   if (status != noErr) {
     NSLog(@"failed to register event hot key: %d", status);
     return;
@@ -319,19 +317,19 @@ static std::string getModStr(SInt32 mod) {
     return "";
   }
   std::vector<std::string> mods;
-  if ((mod & NSEventModifierFlagCapsLock) != 0) {
+  if ((mod & alphaLock) != 0) {
     mods.push_back("⇪");
   }
-  if ((mod & NSEventModifierFlagCommand) != 0) {
+  if ((mod & cmdKey) != 0) {
     mods.push_back("⌘");
   }
-  if ((mod & NSEventModifierFlagShift) != 0) {
+  if ((mod & shiftKey) != 0) {
     mods.push_back("⇧");
   }
-  if ((mod & NSEventModifierFlagOption) != 0) {
+  if ((mod & optionKey) != 0) {
     mods.push_back("⌥");
   }
-  if ((mod & NSEventModifierFlagControl) != 0) {
+  if ((mod & controlKey) != 0) {
     mods.push_back("^");
   }
   std::string ret;
@@ -355,6 +353,26 @@ static std::string getModStr(SInt32 mod) {
     [NSString stringWithFormat:@"%@%@",
       [NSString stringWithUTF8String:modCodeStr.c_str()],
       [NSString stringWithUTF8String:keyCodeStr.c_str()]];
+}
+
++ (SInt32)nsEventModToCarbon:(SInt32)mod {
+  SInt32 ret = 0;
+  if ((mod & NSEventModifierFlagCapsLock) != 0) {
+    ret |= alphaLock;
+  }
+  if ((mod & NSEventModifierFlagCommand) != 0) {
+    ret |= cmdKey;
+  }
+  if ((mod & NSEventModifierFlagShift) != 0) {
+    ret |= shiftKey;
+  }
+  if ((mod & NSEventModifierFlagOption) != 0) {
+    ret |= optionKey;
+  }
+  if ((mod & NSEventModifierFlagControl) != 0) {
+    ret |= controlKey;
+  }
+  return ret;
 }
 
 @end

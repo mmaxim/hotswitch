@@ -16,7 +16,8 @@ struct HotKeyConfigView: View {
   func listenForHotKey() {
     recording = true
     hotkeyMonitor = NSEvent.addLocalMonitorForEvents(matching: NSEvent.EventTypeMask.keyDown, handler: { (event) -> NSEvent? in
-      model.assignKeyToSlot(slotID, key: Int32(event.keyCode), mod: Int32(event.modifierFlags.rawValue))
+      model.assignKeyToSlot(slotID, key: Int32(event.keyCode),
+                            mod: HotKeyConverter.nsEventMod(toCarbon: Int32(event.modifierFlags.rawValue)))
       stopListenForHotKey()
       return nil;
     });

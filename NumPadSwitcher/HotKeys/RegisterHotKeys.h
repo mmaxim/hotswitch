@@ -42,5 +42,6 @@
 @interface HotKeyConverter : NSObject
 
 + (NSString*)keyCodeToString:(SInt32)keyCode andMod:(SInt32)modCode;
++ (SInt32)nsEventModToCarbon:(SInt32)mod;
 
 @end
