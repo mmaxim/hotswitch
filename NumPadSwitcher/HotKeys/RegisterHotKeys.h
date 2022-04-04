@@ -5,13 +5,26 @@
 //  Created by Michael Maxim on 6/6/21.
 //
 
-#include <Foundation/Foundation.h>
+#import <Foundation/Foundation.h>
+#import <Carbon/Carbon.h>
+#import <Cocoa/Cocoa.h>
 
 #pragma once
 
+
+@interface HotKeyBridge : NSObject
+
+@property NSString* appName;
+@property int keyCode;
+@property int mod;
+
+- (instancetype)init;
+
+@end
+
 @protocol HotKeysRegistrarDelegate
 
-- (void) onHotKeyDown:(UInt32)keyCode;
+- (void) onHotKeyDown:(HotKeyBridge*)hotKey;
 
 @end
 
@@ -21,12 +34,13 @@
 
 @property(nonatomic, weak) id<HotKeysRegistrarDelegate> delegate;
 
-- (void)registerHotKeys;
+- (void)syncHotKeys:(NSArray*)hotKeys;
+- (void)handleKeyDown:(EventRef)anEvent;
 
 @end
 
 @interface HotKeyConverter : NSObject
 
-+ (NSString*)keyCodeToString:(UInt32)keyCode;
++ (NSString*)keyCodeToString:(SInt32)keyCode andMod:(SInt32)modCode;
 
 @end

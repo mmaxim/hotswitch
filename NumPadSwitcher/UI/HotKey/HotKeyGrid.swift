@@ -29,16 +29,18 @@ struct HotKeyGrid: View {
           Button(action: {
             activeConfigSlotInfo = ActiveConfigSlotIDInfo(slotID: Int(hotKey.slotID))
           } , label: {
-            HotKeyView(app: hotKey.app,
-                       key: HotKeyConverter.keyCode(toString: UInt32(hotKey.key)))
+            HotKeyView(app: hotKey.app?.isEmpty ?? true ? "<not set>" : hotKey.app,
+                       key: HotKeyConverter.keyCode(toString: hotKey.key, andMod: hotKey.mod))
           }).buttonStyle(PlainButtonStyle())
         }
       }
       .padding(.horizontal)
     }
-    .frame(maxHeight: 300)
+    .frame(width: 600, height: 350)
     .sheet(item: $activeConfigSlotInfo) { item in
-      ConfigView(slotID: item.slotID)
+      AppConfigView(slotID: item.slotID) {
+        activeConfigSlotInfo = nil
+      }
     }
   }
 }

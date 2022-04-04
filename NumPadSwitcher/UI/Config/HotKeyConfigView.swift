@@ -16,8 +16,7 @@ struct HotKeyConfigView: View {
   func listenForHotKey() {
     recording = true
     hotkeyMonitor = NSEvent.addLocalMonitorForEvents(matching: NSEvent.EventTypeMask.keyDown, handler: { (event) -> NSEvent? in
-      let slot = model.getSlot(slotID)
-      slot.key = Int32(event.keyCode)
+      model.assignKeyToSlot(slotID, key: Int32(event.keyCode), mod: Int32(event.modifierFlags.rawValue))
       stopListenForHotKey()
       return nil;
     });
@@ -31,37 +30,25 @@ struct HotKeyConfigView: View {
   }
   
   var body: some View {
-    VStack(alignment: .leading, spacing: 40) {
-      HStack {
-        Text("Hot Key: ")
-        Button(action: {
-          recording.toggle()
-          if (recording) {
-            listenForHotKey()
-          } else {
-            stopListenForHotKey()
-          }
-        }, label: {
-          if (recording) {
-            Text("Recording...")
-              .frame(width: 100)
-          } else {
-            Text(HotKeyConverter.keyCode(toString: UInt32(model.getSlot(slotID).key)))
-              .frame(width: 100)
-          }
-        })
-      }
-      HStack {
-        Button("Save") {
-          model.persist()
+    HStack(spacing: 30) {
+      Button(action: {
+        recording.toggle()
+        if (recording) {
+          listenForHotKey()
+        } else {
+          stopListenForHotKey()
         }
-        Button("Cancel") {
-          model.revert()
+      }, label: {
+        if (recording) {
+          Text("Recording...")
+            .frame(width: 100)
+        } else {
+          Text(HotKeyConverter.keyCode(toString: model.getSlot(slotID).key,
+                                       andMod: model.getSlot(slotID).mod) ?? "Set hotkey")
+            .frame(width: 100)
         }
-      }
+      })
     }
-    .frame(height: 100)
-    .padding()
   }
 }
 

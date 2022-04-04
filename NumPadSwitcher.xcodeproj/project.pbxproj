@@ -10,7 +10,6 @@
 		273EA40B266F0724003E06B8 /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273EA40A266F0724003E06B8 /* HotKey.swift */; };
 		273EA413266F0F67003E06B8 /* HotKeyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273EA412266F0F67003E06B8 /* HotKeyGrid.swift */; };
 		273EA416266F0FD7003E06B8 /* Config.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 273EA414266F0FD7003E06B8 /* Config.xcdatamodeld */; };
-		27727E3A26D95D0900EE0EBB /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27727E3926D95D0900EE0EBB /* ConfigView.swift */; };
 		27727E3C26D95D6600EE0EBB /* AppConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27727E3B26D95D6600EE0EBB /* AppConfigView.swift */; };
 		27727E3E26D95D7600EE0EBB /* HotKeyConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27727E3D26D95D7600EE0EBB /* HotKeyConfigView.swift */; };
 		27727E4026D9620800EE0EBB /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27727E3F26D9620800EE0EBB /* AppHelper.swift */; };
@@ -29,7 +28,6 @@
 		273EA40A266F0724003E06B8 /* HotKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKey.swift; sourceTree = "<group>"; };
 		273EA412266F0F67003E06B8 /* HotKeyGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyGrid.swift; sourceTree = "<group>"; };
 		273EA415266F0FD7003E06B8 /* Config.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Config.xcdatamodel; sourceTree = "<group>"; };
-		27727E3926D95D0900EE0EBB /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		27727E3B26D95D6600EE0EBB /* AppConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigView.swift; sourceTree = "<group>"; };
 		27727E3D26D95D7600EE0EBB /* HotKeyConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyConfigView.swift; sourceTree = "<group>"; };
 		27727E3F26D9620800EE0EBB /* AppHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 			children = (
 				27727E3B26D95D6600EE0EBB /* AppConfigView.swift */,
 				27727E3D26D95D7600EE0EBB /* HotKeyConfigView.swift */,
-				27727E3926D95D0900EE0EBB /* ConfigView.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -234,7 +231,6 @@
 				279B017326D810A0003711AF /* Model.swift in Sources */,
 				279B017626D811EE003711AF /* Persistence.swift in Sources */,
 				27727E3E26D95D7600EE0EBB /* HotKeyConfigView.swift in Sources */,
-				27727E3A26D95D0900EE0EBB /* ConfigView.swift in Sources */,
 				27994FB7266DB61500447130 /* RegisterHotKeys.mm in Sources */,
 				273EA413266F0F67003E06B8 /* HotKeyGrid.swift in Sources */,
 				273EA40B266F0724003E06B8 /* HotKey.swift in Sources */,
@@ -378,6 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = NumPadSwitcher/NumPadSwitcher.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -406,6 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = NumPadSwitcher/NumPadSwitcher.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";

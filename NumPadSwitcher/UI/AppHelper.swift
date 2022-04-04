@@ -8,9 +8,13 @@
 import Foundation
 import Cocoa
 
-struct AppDesc {
+struct AppDesc : Equatable {
   var name: String
   var icon: NSImage?
+  
+  static func == (lhs: AppDesc, rhs: AppDesc) -> Bool {
+    return lhs.name == rhs.name
+  }
 }
 
 class AppHelper {

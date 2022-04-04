@@ -33,31 +33,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
     AXIsProcessTrustedWithOptions(options)
     
     HotKeysRegistrar.shared().delegate = self
-    HotKeysRegistrar.shared().registerHotKeys()
+    HotKeysRegistrar.shared().syncHotKeys(hotkeyModel.getHotKeysForBridge())
   }
   
-  func keyCodeToApp(_ keyCode: UInt32) -> String {
-    switch (Int(keyCode)) {
-    case kVK_ANSI_Keypad5:
-      return "Keybase"
-    case kVK_ANSI_Keypad3:
-      return "Google Chrome"
-    case kVK_ANSI_Keypad8:
-      return "Xcode"
-    case kVK_ANSI_Keypad7:
-      return "zoom.us"
-    case kVK_ANSI_Keypad2:
-      return "iTerm2"
-    case kVK_ANSI_Keypad1:
-      return "Code"
-    default:
-      return ""
-    }
-  }
-  
-  func onHotKeyDown(_ keyCode: UInt32) {
+  func onHotKeyDown(_ hotKey : HotKeyBridge) {
     let apps = NSWorkspace.shared.runningApplications
-    let name = keyCodeToApp(keyCode)
+    let name = hotKey.appName
     for app in apps {
       if app.localizedName == name {
         let appRef = AXUIElementCreateApplication(app.processIdentifier)
