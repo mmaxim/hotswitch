@@ -23,7 +23,6 @@
 		279B017326D810A0003711AF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B017226D810A0003711AF /* Model.swift */; };
 		279B017626D811EE003711AF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B017526D811EE003711AF /* Persistence.swift */; };
 		27F8556027FBCC9D00A00217 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8555F27FBCC9D00A00217 /* StatusBarController.swift */; };
-		27F8556227FBD10F00A00217 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8556127FBD10F00A00217 /* EventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +46,6 @@
 		279B017226D810A0003711AF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		279B017526D811EE003711AF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		27F8555F27FBCC9D00A00217 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
-		27F8556127FBD10F00A00217 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +74,6 @@
 			children = (
 				27994FA2266D1E6C00447130 /* AppDelegate.swift */,
 				27F8555F27FBCC9D00A00217 /* StatusBarController.swift */,
-				27F8556127FBD10F00A00217 /* EventMonitor.swift */,
 				27727E3F26D9620800EE0EBB /* AppHelper.swift */,
 				27727E4126D9DB5500EE0EBB /* TextFieldDebounced.swift */,
 				27727E3826D95CEE00EE0EBB /* Config */,
@@ -233,7 +230,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				27727E3C26D95D6600EE0EBB /* AppConfigView.swift in Sources */,
-				27F8556227FBD10F00A00217 /* EventMonitor.swift in Sources */,
 				27F8556027FBCC9D00A00217 /* StatusBarController.swift in Sources */,
 				27727E4226D9DB5500EE0EBB /* TextFieldDebounced.swift in Sources */,
 				279B017326D810A0003711AF /* Model.swift in Sources */,
