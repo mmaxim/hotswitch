@@ -23,7 +23,6 @@ struct HotKeyGrid: View {
   ]
   
   var body: some View {
-    ScrollView {
       LazyVGrid(columns: columns) {
         ForEach(hotkeyModel.hotKeys, id: \.self) { hotKey in
           Button(action: {
@@ -34,9 +33,8 @@ struct HotKeyGrid: View {
         }
       }
       .padding(.horizontal)
-    }
     .padding()
-    .frame(width: 600, height: 350)
+    .frame(width: 600, height: 400)
     .sheet(item: $activeConfigSlotInfo) { item in
       AppConfigView(slotID: item.slotID) {
         activeConfigSlotInfo = nil

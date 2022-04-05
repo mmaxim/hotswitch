@@ -11,29 +11,23 @@ import Carbon
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
-  var window: NSWindow!
   var hotkeyModel = HotKeyModel()
+  var statusBar : StatusBarController?
+  var popover = NSPopover()
   
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    let mainView = HotKeyGrid()
-      .environmentObject(hotkeyModel)
-    
-    // Create the window and set the content view.
-    window = NSWindow(
-      contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-      styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-      backing: .buffered, defer: false)
-    window.isReleasedWhenClosed = false
-    window.center()
-    window.setFrameAutosaveName("Main Window")
-    window.contentView = NSHostingView(rootView: mainView)
-    window.makeKeyAndOrderFront(nil)
+    let mainView = HotKeyGrid().environmentObject(hotkeyModel)
     
     let options : NSDictionary = [kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString: true]
     AXIsProcessTrustedWithOptions(options)
     
     HotKeysRegistrar.shared().delegate = self
     HotKeysRegistrar.shared().syncHotKeys(hotkeyModel.getHotKeysForBridge())
+    
+    popover.contentSize = NSSize(width: 360, height: 660)
+    popover.contentViewController = NSHostingController(rootView: mainView)
+    
+    statusBar = StatusBarController(popover)
   }
   
   func onHotKeyDown(_ hotKey : HotKeyBridge) {
