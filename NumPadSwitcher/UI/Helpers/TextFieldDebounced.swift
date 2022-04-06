@@ -33,7 +33,7 @@ struct TextFieldDebounced : View {
   
   var body: some View {
     VStack {
-      LegacyTextField(text: $textObserver.searchText, isFirstResponder: $isFirstResponder)
+      LegacyTextField(text: $textObserver.searchText, isFirstResponder: true)
     }.onReceive(textObserver.$debouncedText) { (val) in
       text = val
     }

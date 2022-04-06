@@ -11,42 +11,39 @@ import AppKit
 struct LegacyTextField: NSViewRepresentable {
   
   @Binding var text: String
-  @Binding public var isFirstResponder: Bool
+  var isFirstResponder = false
   
   public func makeNSView(context: Context) -> NSTextField {
     let view = NSTextField()
-    view.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
     view.delegate = context.coordinator
     return view
   }
   
   public func updateNSView(_ view: NSTextField, context: Context) {
     view.stringValue = text
-    switch isFirstResponder {
+    switch context.coordinator.isFirstResponder {
     case true: view.becomeFirstResponder()
     case false: view.resignFirstResponder()
     }
   }
   
   public func makeCoordinator() -> Coordinator {
-    Coordinator($text, isFirstResponder: $isFirstResponder)
+    Coordinator($text, isFirstResponder)
   }
   
   public class Coordinator: NSObject, NSTextFieldDelegate {
     var text: Binding<String>
-    var isFirstResponder: Binding<Bool>
+    var isFirstResponder: Bool
     
-    init(_ text: Binding<String>, isFirstResponder: Binding<Bool>) {
+    init(_ text: Binding<String>, _ isFirstResponder: Bool) {
       self.text = text
       self.isFirstResponder = isFirstResponder
     }
     
-    public func controlTextDidChange(_ obj: Notification) {
+    func controlTextDidChange(_ obj: Notification) {
       let textField = obj.object as! NSTextField
       self.text.wrappedValue = textField.stringValue
-      self.isFirstResponder.wrappedValue = false
+      self.isFirstResponder = false
     }
-    
-   
   }
 }

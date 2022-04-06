@@ -16,7 +16,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
   var popover = NSPopover()
   
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    let mainView = RootView().environmentObject(hotkeyModel)
+    let mainView = RootView()
+      .background(Color(NSColor.windowBackgroundColor))
+      .environmentObject(hotkeyModel)
     
     let options : NSDictionary = [kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString: true]
     AXIsProcessTrustedWithOptions(options)
@@ -45,11 +47,5 @@ class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
       }
     }
   }
-  
-  func applicationWillTerminate(_ aNotification: Notification) {
-    // Insert code here to tear down your application
-  }
-  
-  
 }
 
