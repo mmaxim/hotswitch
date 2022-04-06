@@ -26,6 +26,7 @@
 		27F8556427FBE63F00A00217 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8556327FBE63F00A00217 /* AboutView.swift */; };
 		27F8556727FBEDE700A00217 /* ModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8556627FBEDE700A00217 /* ModalController.swift */; };
 		27F8558927FD2E5800A00217 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8558827FD2E5800A00217 /* RootView.swift */; };
+		27F8558B27FE207700A00217 /* LegacyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8558A27FE207700A00217 /* LegacyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		27F8556327FBE63F00A00217 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		27F8556627FBEDE700A00217 /* ModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalController.swift; sourceTree = "<group>"; };
 		27F8558827FD2E5800A00217 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		27F8558A27FE207700A00217 /* LegacyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			children = (
 				27727E4126D9DB5500EE0EBB /* TextFieldDebounced.swift */,
 				27F8556627FBEDE700A00217 /* ModalController.swift */,
+				27F8558A27FE207700A00217 /* LegacyTextField.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				27F8556727FBEDE700A00217 /* ModalController.swift in Sources */,
 				27727E4026D9620800EE0EBB /* AppHelper.swift in Sources */,
 				273EA416266F0FD7003E06B8 /* Config.xcdatamodeld in Sources */,
+				27F8558B27FE207700A00217 /* LegacyTextField.swift in Sources */,
 				27F8558927FD2E5800A00217 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,10 +29,11 @@ struct TextFieldDebounced : View {
   var title: String
   @Binding var text: String
   @StateObject private var textObserver = TextFieldObserver()
+  @State var isFirstResponder = true
   
   var body: some View {
     VStack {
-      TextField(title, text: $textObserver.searchText)
+      LegacyTextField(text: $textObserver.searchText, isFirstResponder: $isFirstResponder)
     }.onReceive(textObserver.$debouncedText) { (val) in
       text = val
     }

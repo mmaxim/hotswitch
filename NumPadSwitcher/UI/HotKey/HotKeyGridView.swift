@@ -38,11 +38,11 @@ struct HotKeyGrid: View {
   }
 }
 
-/*
+
 struct HotKeyGrid_Previews: PreviewProvider {
   static var previews: some View {
-    //HotKeyGrid()
-     // .environmentObject(HotKeyModel())
+    HotKeyGrid(slotID: Binding.constant(0))
+      .environmentObject(HotKeyModel())
   }
 }
-*/
+

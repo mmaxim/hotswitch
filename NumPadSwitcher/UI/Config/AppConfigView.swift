@@ -28,7 +28,7 @@ struct AppConfigView: View {
   @State var filter = ""
   @State var selectedApp: AppDesc?
   var close : () -> ()
-
+  
   func applyFilter() -> [AppDesc] {
     let runningApps = AppHelper.shared.getRunningApps()
     if filter.isEmpty {
