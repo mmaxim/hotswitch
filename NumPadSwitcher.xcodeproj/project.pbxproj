@@ -27,6 +27,7 @@
 		27F8556727FBEDE700A00217 /* ModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8556627FBEDE700A00217 /* ModalController.swift */; };
 		27F8558927FD2E5800A00217 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8558827FD2E5800A00217 /* RootView.swift */; };
 		27F8558B27FE207700A00217 /* LegacyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8558A27FE207700A00217 /* LegacyTextField.swift */; };
+		27F8558D27FE30BC00A00217 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8558C27FE30BC00A00217 /* HelpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		27F8556627FBEDE700A00217 /* ModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalController.swift; sourceTree = "<group>"; };
 		27F8558827FD2E5800A00217 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		27F8558A27FE207700A00217 /* LegacyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyTextField.swift; sourceTree = "<group>"; };
+		27F8558C27FE30BC00A00217 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				27F8556327FBE63F00A00217 /* AboutView.swift */,
 				27994FA2266D1E6C00447130 /* AppDelegate.swift */,
 				27727E3F26D9620800EE0EBB /* AppHelper.swift */,
+				27F8558C27FE30BC00A00217 /* HelpView.swift */,
 				27F8558827FD2E5800A00217 /* RootView.swift */,
 				27F8555F27FBCC9D00A00217 /* StatusBarController.swift */,
 				27727E3826D95CEE00EE0EBB /* Config */,
@@ -255,6 +258,7 @@
 				279B017326D810A0003711AF /* Model.swift in Sources */,
 				27F8556427FBE63F00A00217 /* AboutView.swift in Sources */,
 				279B017626D811EE003711AF /* Persistence.swift in Sources */,
+				27F8558D27FE30BC00A00217 /* HelpView.swift in Sources */,
 				27727E3E26D95D7600EE0EBB /* HotKeyConfigView.swift in Sources */,
 				27994FB7266DB61500447130 /* RegisterHotKeys.mm in Sources */,
 				273EA413266F0F67003E06B8 /* HotKeyGridView.swift in Sources */,

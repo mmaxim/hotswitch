@@ -33,8 +33,8 @@ struct HotKeyGrid: View {
           }).buttonStyle(PlainButtonStyle())
         }
       }
-      .frame(width: 600, height: 370)
     }
+    .frame(maxHeight: .infinity)
   }
 }
 

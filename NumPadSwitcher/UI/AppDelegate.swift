@@ -28,7 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
     
     popover.contentSize = NSSize(width: 600, height: 450)
     popover.contentViewController = NSHostingController(rootView: mainView)
-    popover.setValue(true, forKeyPath: "shouldHideAnchor")
+    //popover.setValue(true, forKeyPath: "shouldHideAnchor")
     
     statusBar = StatusBarController(popover)
   }
