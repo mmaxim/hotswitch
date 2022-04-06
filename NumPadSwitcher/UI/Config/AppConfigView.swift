@@ -9,12 +9,15 @@ import SwiftUI
 
 struct AppDescView : View {
   var rapp: AppDesc
+  var isSelected: Bool
+  
   var body: some View {
     HStack {
       if (rapp.icon != nil) {
         Image(nsImage: rapp.icon!)
       }
       Text(rapp.name)
+        .foregroundColor((isSelected) ? Color.white : Color.primary)
     }
   }
 }
@@ -52,18 +55,25 @@ struct AppConfigView: View {
       }
       List {
         ForEach(applyFilter(), id: \.self.name) { rapp in
-          AppDescView(rapp: rapp)
-            .listRowBackground((selectedApp != nil && rapp == selectedApp) ? Color(NSColor.selectedContentBackgroundColor) : Color(NSColor.windowBackgroundColor))
-            .onTapGesture {
-              selectedApp = rapp
-              model.assignAppToSlot(slotID, app: rapp.name)
-            }
+          let isSelected = selectedApp != nil && rapp == selectedApp
+          Button(action: {
+            selectedApp = rapp
+            model.assignAppToSlot(slotID, app: rapp.name)
+          }, label: {
+            AppDescView(rapp: rapp, isSelected: isSelected)
+              .frame(maxWidth: .infinity, alignment: .leading)
+          })
+          .buttonStyle(BorderlessButtonStyle())
+          .padding(.horizontal, 2)
+          .padding([.top, .bottom], 2)
+          .listRowBackground((isSelected) ? Color(NSColor.selectedContentBackgroundColor) : Color(NSColor.controlBackgroundColor))
         }
-      }.frame(width: 500, height: 200)
+      }
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
       Divider()
       HStack {
         if (currentApp != nil) {
-          AppDescView(rapp: currentApp!)
+          AppDescView(rapp: currentApp!, isSelected: false)
         } else {
           Text(model.getSlot(slotID).app ?? "<no app selected>").padding(.vertical)
         }
@@ -87,11 +97,13 @@ struct AppConfigView: View {
         }
       }
     }.padding()
+      .frame(width: 500, height: 400)
   }
 }
 
 struct AppConfigView_Previews: PreviewProvider {
   static var previews: some View {
-    AppConfigView(slotID: 0, close: {}).environmentObject(HotKeyModel())
+    AppConfigView(slotID: 0, selectedApp: AppDesc(name: "Activity Monitor", inDock: true),
+                  close: {}).environmentObject(HotKeyModel())
   }
 }

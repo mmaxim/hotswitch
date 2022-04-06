@@ -16,7 +16,9 @@ struct HotKeyView: View {
   var body: some View {
     VStack {
       if appName.isEmpty {
-        Image("no-app").resizable().frame(width: 64, height: 64)
+        Image("no-app")
+          .resizable()
+          .frame(width: 64, height: 64)
       } else {
         let app = AppHelper.shared.getAppByName(name: appName)
         if app != nil {
@@ -25,6 +27,9 @@ struct HotKeyView: View {
           }
           Text(app!.name)
         } else {
+          Image("no-app")
+            .resizable()
+            .frame(width: 64, height: 64)
           Text(appName)
         }
         let keyBind = HotKeyConverter.keyCode(toString: key!, andMod: mod ?? 0)
@@ -32,7 +37,7 @@ struct HotKeyView: View {
           Text(keyBind!)
         }
       }
-    }.frame(minHeight: 100)
+    }.frame(minHeight: 100, alignment: .topLeading)
   }
 }
 
@@ -40,6 +45,7 @@ struct HotKeyView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
       HotKeyView(appName: "Keybase", key: 5, mod: nil)
+      HotKeyView(appName: "", key: 5, mod: nil)
       HotKeyView(appName: "XXX", key: 5, mod: nil)
     }
   }

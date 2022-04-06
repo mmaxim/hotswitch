@@ -48,6 +48,7 @@ class StatusBarController {
         self.hidePopover(event)
       })
       popover.show(relativeTo: statusBarButton.bounds, of: statusBarButton, preferredEdge: NSRectEdge.maxY)
+      popover.contentViewController?.view.window?.makeKey()
     }
   }
   

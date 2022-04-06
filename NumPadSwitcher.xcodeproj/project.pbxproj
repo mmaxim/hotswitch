@@ -23,6 +23,8 @@
 		279B017326D810A0003711AF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B017226D810A0003711AF /* Model.swift */; };
 		279B017626D811EE003711AF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B017526D811EE003711AF /* Persistence.swift */; };
 		27F8556027FBCC9D00A00217 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8555F27FBCC9D00A00217 /* StatusBarController.swift */; };
+		27F8556427FBE63F00A00217 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8556327FBE63F00A00217 /* AboutView.swift */; };
+		27F8556727FBEDE700A00217 /* ModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8556627FBEDE700A00217 /* ModalController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		279B017226D810A0003711AF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		279B017526D811EE003711AF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		27F8555F27FBCC9D00A00217 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		27F8556327FBE63F00A00217 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		27F8556627FBEDE700A00217 /* ModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +76,13 @@
 		273EA40D266F0934003E06B8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				27F8556327FBE63F00A00217 /* AboutView.swift */,
 				27994FA2266D1E6C00447130 /* AppDelegate.swift */,
-				27F8555F27FBCC9D00A00217 /* StatusBarController.swift */,
 				27727E3F26D9620800EE0EBB /* AppHelper.swift */,
-				27727E4126D9DB5500EE0EBB /* TextFieldDebounced.swift */,
+				27F8555F27FBCC9D00A00217 /* StatusBarController.swift */,
 				27727E3826D95CEE00EE0EBB /* Config */,
 				273EA40C266F0925003E06B8 /* HotKey */,
+				27F8556527FBEDD000A00217 /* Helpers */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -158,6 +163,15 @@
 			path = HotKeys;
 			sourceTree = "<group>";
 		};
+		27F8556527FBEDD000A00217 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				27727E4126D9DB5500EE0EBB /* TextFieldDebounced.swift */,
+				27F8556627FBEDE700A00217 /* ModalController.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,12 +247,14 @@
 				27F8556027FBCC9D00A00217 /* StatusBarController.swift in Sources */,
 				27727E4226D9DB5500EE0EBB /* TextFieldDebounced.swift in Sources */,
 				279B017326D810A0003711AF /* Model.swift in Sources */,
+				27F8556427FBE63F00A00217 /* AboutView.swift in Sources */,
 				279B017626D811EE003711AF /* Persistence.swift in Sources */,
 				27727E3E26D95D7600EE0EBB /* HotKeyConfigView.swift in Sources */,
 				27994FB7266DB61500447130 /* RegisterHotKeys.mm in Sources */,
 				273EA413266F0F67003E06B8 /* HotKeyGridView.swift in Sources */,
 				273EA40B266F0724003E06B8 /* HotKeyView.swift in Sources */,
 				27994FA3266D1E6C00447130 /* AppDelegate.swift in Sources */,
+				27F8556727FBEDE700A00217 /* ModalController.swift in Sources */,
 				27727E4026D9620800EE0EBB /* AppHelper.swift in Sources */,
 				273EA416266F0FD7003E06B8 /* Config.xcdatamodeld in Sources */,
 			);
@@ -393,7 +409,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikemaxim.NumPadSwitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NumPadSwitcher/NumPadSwitcher-Bridging-Header.h";
@@ -422,7 +438,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikemaxim.NumPadSwitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NumPadSwitcher/NumPadSwitcher-Bridging-Header.h";
