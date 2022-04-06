@@ -96,8 +96,8 @@ struct AppConfigView: View {
           model.resetSlot(slotID)
         }
       }
-    }.padding()
-      .frame(width: 500, height: 400)
+    }
+    .padding()
   }
 }
 

@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
   var popover = NSPopover()
   
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    let mainView = HotKeyGrid().environmentObject(hotkeyModel)
+    let mainView = RootView().environmentObject(hotkeyModel)
     
     let options : NSDictionary = [kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString: true]
     AXIsProcessTrustedWithOptions(options)
@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
     HotKeysRegistrar.shared().delegate = self
     HotKeysRegistrar.shared().syncHotKeys(hotkeyModel.getHotKeysForBridge())
     
-    popover.contentSize = NSSize(width: 360, height: 660)
+    popover.contentSize = NSSize(width: 600, height: 450)
     popover.contentViewController = NSHostingController(rootView: mainView)
     popover.setValue(true, forKeyPath: "shouldHideAnchor")
     
