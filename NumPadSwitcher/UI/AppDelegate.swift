@@ -20,9 +20,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
       .background(Color(NSColor.windowBackgroundColor))
       .environmentObject(hotkeyModel)
     
-    let options : NSDictionary = [kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString: true]
-    AXIsProcessTrustedWithOptions(options)
-    
     HotKeysRegistrar.shared().delegate = self
     HotKeysRegistrar.shared().syncHotKeys(hotkeyModel.getHotKeysForBridge())
     
@@ -38,11 +35,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
     let name = hotKey.appName
     for app in apps {
       if app.localizedName == name {
-        let appRef = AXUIElementCreateApplication(app.processIdentifier)
-        print("Attempting")
-        if (AXError.success != AXUIElementSetAttributeValue(appRef, NSAccessibility.Attribute.frontmost as CFString, kCFBooleanTrue)) {
-          print("Failed")
-        }
+        
+        let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: app.bundleIdentifier!)
+        print("opening: " + app.bundleIdentifier!)
+        let configuration = NSWorkspace.OpenConfiguration()
+        NSWorkspace.shared.openApplication(at: url!,
+                                           configuration: configuration,
+                                           completionHandler: nil)
         break
       }
     }

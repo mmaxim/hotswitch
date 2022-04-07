@@ -13,6 +13,7 @@ struct AppDesc : Equatable {
   var icon: NSImage?
   var bigIcon: NSImage?
   var inDock: Bool
+  var bundleId: String?
   
   static func == (lhs: AppDesc, rhs: AppDesc) -> Bool {
     return lhs.name == rhs.name
@@ -32,7 +33,8 @@ class AppHelper {
       let bigIcon = app.icon?.copy() as! NSImage?
       bigIcon?.size = NSMakeSize(64,64)
       ret.append(AppDesc(name: app.localizedName ?? "<unknown>", icon: app.icon,
-                         bigIcon: bigIcon, inDock: app.activationPolicy == .regular))
+                         bigIcon: bigIcon, inDock: app.activationPolicy == .regular,
+                         bundleId: app.bundleIdentifier ?? "<unknown>"))
     }
     ret.sort {
       if $0.inDock && !$1.inDock {
