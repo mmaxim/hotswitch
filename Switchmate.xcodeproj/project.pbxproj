@@ -38,13 +38,13 @@
 		27727E3D26D95D7600EE0EBB /* HotKeyConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyConfigView.swift; sourceTree = "<group>"; };
 		27727E3F26D9620800EE0EBB /* AppHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
 		27727E4126D9DB5500EE0EBB /* TextFieldDebounced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDebounced.swift; sourceTree = "<group>"; };
-		27994F9F266D1E6C00447130 /* NumPadSwitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumPadSwitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27994F9F266D1E6C00447130 /* Switchmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Switchmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27994FA2266D1E6C00447130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27994FA6266D1E6D00447130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27994FA9266D1E6D00447130 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27994FAC266D1E6D00447130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27994FAE266D1E6D00447130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27994FB5266DB61400447130 /* NumPadSwitcher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NumPadSwitcher-Bridging-Header.h"; sourceTree = "<group>"; };
+		27994FB5266DB61400447130 /* Switchmate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Switchmate-Bridging-Header.h"; sourceTree = "<group>"; };
 		27994FB6266DB61500447130 /* RegisterHotKeys.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RegisterHotKeys.mm; sourceTree = "<group>"; };
 		27994FB8266DB62700447130 /* RegisterHotKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterHotKeys.h; sourceTree = "<group>"; };
 		27994FBA266DB80D00447130 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
@@ -107,7 +107,7 @@
 		27994F96266D1E6C00447130 = {
 			isa = PBXGroup;
 			children = (
-				27994FA1266D1E6C00447130 /* NumPadSwitcher */,
+				27994FA1266D1E6C00447130 /* Switchmate */,
 				27994FA0266D1E6C00447130 /* Products */,
 				27994FB9266DB80D00447130 /* Frameworks */,
 			);
@@ -116,12 +116,12 @@
 		27994FA0266D1E6C00447130 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				27994F9F266D1E6C00447130 /* NumPadSwitcher.app */,
+				27994F9F266D1E6C00447130 /* Switchmate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		27994FA1266D1E6C00447130 /* NumPadSwitcher */ = {
+		27994FA1266D1E6C00447130 /* Switchmate */ = {
 			isa = PBXGroup;
 			children = (
 				279B017126D8108F003711AF /* Data */,
@@ -132,9 +132,9 @@
 				27994FAB266D1E6D00447130 /* Main.storyboard */,
 				27994FAE266D1E6D00447130 /* Info.plist */,
 				27994FA8266D1E6D00447130 /* Preview Content */,
-				27994FB5266DB61400447130 /* NumPadSwitcher-Bridging-Header.h */,
+				27994FB5266DB61400447130 /* Switchmate-Bridging-Header.h */,
 			);
-			path = NumPadSwitcher;
+			path = Switchmate;
 			sourceTree = "<group>";
 		};
 		27994FA8266D1E6D00447130 /* Preview Content */ = {
@@ -184,9 +184,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		27994F9E266D1E6C00447130 /* NumPadSwitcher */ = {
+		27994F9E266D1E6C00447130 /* Switchmate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27994FB2266D1E6D00447130 /* Build configuration list for PBXNativeTarget "NumPadSwitcher" */;
+			buildConfigurationList = 27994FB2266D1E6D00447130 /* Build configuration list for PBXNativeTarget "Switchmate" */;
 			buildPhases = (
 				27994F9B266D1E6C00447130 /* Sources */,
 				27994F9C266D1E6C00447130 /* Frameworks */,
@@ -196,9 +196,9 @@
 			);
 			dependencies = (
 			);
-			name = NumPadSwitcher;
+			name = Switchmate;
 			productName = NumPadSwitcher;
-			productReference = 27994F9F266D1E6C00447130 /* NumPadSwitcher.app */;
+			productReference = 27994F9F266D1E6C00447130 /* Switchmate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 27994F9A266D1E6C00447130 /* Build configuration list for PBXProject "NumPadSwitcher" */;
+			buildConfigurationList = 27994F9A266D1E6C00447130 /* Build configuration list for PBXProject "Switchmate" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -229,7 +229,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27994F9E266D1E6C00447130 /* NumPadSwitcher */,
+				27994F9E266D1E6C00447130 /* Switchmate */,
 			);
 		};
 /* End PBXProject section */
@@ -408,23 +408,23 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = NumPadSwitcher/NumPadSwitcher.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Switchmate/Switchmate.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"NumPadSwitcher/Preview Content\"";
-				DEVELOPMENT_TEAM = 26P5T8RYVG;
+				DEVELOPMENT_ASSET_PATHS = "Switchmate/Preview\\ Content";
+				DEVELOPMENT_TEAM = XLSCUFSY5C;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NumPadSwitcher/Info.plist;
+				INFOPLIST_FILE = Switchmate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikemaxim.NumPadSwitcher;
+				PRODUCT_BUNDLE_IDENTIFIER = org.mmaxim.Switchmate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "NumPadSwitcher/NumPadSwitcher-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Switchmate/Switchmate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -437,23 +437,23 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = NumPadSwitcher/NumPadSwitcher.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Switchmate/Switchmate.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"NumPadSwitcher/Preview Content\"";
-				DEVELOPMENT_TEAM = 26P5T8RYVG;
+				DEVELOPMENT_ASSET_PATHS = "Switchmate/Preview\\ Content";
+				DEVELOPMENT_TEAM = XLSCUFSY5C;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NumPadSwitcher/Info.plist;
+				INFOPLIST_FILE = Switchmate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikemaxim.NumPadSwitcher;
+				PRODUCT_BUNDLE_IDENTIFIER = org.mmaxim.Switchmate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "NumPadSwitcher/NumPadSwitcher-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Switchmate/Switchmate-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -461,7 +461,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		27994F9A266D1E6C00447130 /* Build configuration list for PBXProject "NumPadSwitcher" */ = {
+		27994F9A266D1E6C00447130 /* Build configuration list for PBXProject "Switchmate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27994FB0266D1E6D00447130 /* Debug */,
@@ -470,7 +470,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27994FB2266D1E6D00447130 /* Build configuration list for PBXNativeTarget "NumPadSwitcher" */ = {
+		27994FB2266D1E6D00447130 /* Build configuration list for PBXNativeTarget "Switchmate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27994FB3266D1E6D00447130 /* Debug */,
