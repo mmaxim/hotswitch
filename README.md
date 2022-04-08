@@ -1,1 +1,1 @@
-# Switchmate
+# Hotswitch
