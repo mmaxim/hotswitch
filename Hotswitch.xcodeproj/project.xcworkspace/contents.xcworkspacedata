@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/mike/numpadswitcher/Switchmate.xcodeproj">
+      location = "self:/Users/mike/switchmate/Hotswitch.xcodeproj">
    </FileRef>
 </Workspace>

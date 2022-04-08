@@ -16,7 +16,7 @@ struct AboutView: View {
           .resizable()
           .frame(width: 128, height: 128)
         VStack(alignment: .leading) {
-          Text("App Switcher")
+          Text("Hotswitch")
             .font(.title)
           Text("1.0").font(.caption)
           Divider()
