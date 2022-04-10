@@ -19,8 +19,16 @@ static OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent,
   if (userData == nullptr) {
     return noErr;
   }
+  auto kind = GetEventKind(anEvent);
   auto registrar = (__bridge HotKeysRegistrar*)userData;
-  [registrar handleKeyDown:anEvent];
+  switch (kind) {
+    case  kEventHotKeyPressed:
+      [registrar handleKeyDown:anEvent];
+      break;
+    case kEventHotKeyReleased:
+      [registrar handleKeyUp];
+      break;
+  }
   return noErr;
 }
 
@@ -67,6 +75,8 @@ public:
   std::array<EventTypeSpec, 2> eventTypes;
   eventTypes[0].eventClass = kEventClassKeyboard;
   eventTypes[0].eventKind = kEventHotKeyPressed;
+  eventTypes[1].eventClass = kEventClassKeyboard;
+  eventTypes[1].eventKind = kEventHotKeyReleased;
   auto status = InstallApplicationEventHandler(hotKeyHandler, eventTypes.size(), eventTypes.data(),
                                                (__bridge void*)self, NULL);
   if (status != noErr) {
@@ -85,6 +95,10 @@ public:
   
   auto reged = registeredKeys[hotKeyID.id];
   [_delegate onHotKeyDown:reged.get_hotkey()];
+}
+
+- (void) handleKeyUp {
+  [_delegate onHotKeyUp];
 }
 
 - (void) registerHotKey:(HotKeyBridge*)hotKey {

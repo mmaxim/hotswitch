@@ -35,6 +35,7 @@ struct HotKeyGrid: View {
       }
     }
     .frame(maxHeight: .infinity)
+    .background(Color.clear)
   }
 }
 
@@ -43,6 +44,7 @@ struct HotKeyGrid_Previews: PreviewProvider {
   static var previews: some View {
     HotKeyGrid(slotID: Binding.constant(0))
       .environmentObject(HotKeyModel())
+      .frame(width: 600, height: 450)
   }
 }
 

@@ -22,6 +22,8 @@
 		27994FBB266DB80D00447130 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27994FBA266DB80D00447130 /* Carbon.framework */; };
 		279B017326D810A0003711AF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B017226D810A0003711AF /* Model.swift */; };
 		279B017626D811EE003711AF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B017526D811EE003711AF /* Persistence.swift */; };
+		27C30BAE28026CC20033A51C /* VisualEffectBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C30BAD28026CC20033A51C /* VisualEffectBackground.swift */; };
+		27EB670A2802637B0026340F /* GlobalConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EB67092802637B0026340F /* GlobalConfigView.swift */; };
 		27F8556027FBCC9D00A00217 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8555F27FBCC9D00A00217 /* StatusBarController.swift */; };
 		27F8556427FBE63F00A00217 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8556327FBE63F00A00217 /* AboutView.swift */; };
 		27F8556727FBEDE700A00217 /* ModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8556627FBEDE700A00217 /* ModalController.swift */; };
@@ -50,6 +52,8 @@
 		27994FBA266DB80D00447130 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		279B017226D810A0003711AF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		279B017526D811EE003711AF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		27C30BAD28026CC20033A51C /* VisualEffectBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBackground.swift; sourceTree = "<group>"; };
+		27EB67092802637B0026340F /* GlobalConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConfigView.swift; sourceTree = "<group>"; };
 		27F8555F27FBCC9D00A00217 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		27F8556327FBE63F00A00217 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		27F8556627FBEDE700A00217 /* ModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			children = (
 				27727E3B26D95D6600EE0EBB /* AppConfigView.swift */,
 				27727E3D26D95D7600EE0EBB /* HotKeyConfigView.swift */,
+				27EB67092802637B0026340F /* GlobalConfigView.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				27727E4126D9DB5500EE0EBB /* TextFieldDebounced.swift */,
 				27F8556627FBEDE700A00217 /* ModalController.swift */,
 				27F8558A27FE207700A00217 /* LegacyTextField.swift */,
+				27C30BAD28026CC20033A51C /* VisualEffectBackground.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -257,12 +263,14 @@
 				27727E4226D9DB5500EE0EBB /* TextFieldDebounced.swift in Sources */,
 				279B017326D810A0003711AF /* Model.swift in Sources */,
 				27F8556427FBE63F00A00217 /* AboutView.swift in Sources */,
+				27EB670A2802637B0026340F /* GlobalConfigView.swift in Sources */,
 				279B017626D811EE003711AF /* Persistence.swift in Sources */,
 				27F8558D27FE30BC00A00217 /* HelpView.swift in Sources */,
 				27727E3E26D95D7600EE0EBB /* HotKeyConfigView.swift in Sources */,
 				27994FB7266DB61500447130 /* RegisterHotKeys.mm in Sources */,
 				273EA413266F0F67003E06B8 /* HotKeyGridView.swift in Sources */,
 				273EA40B266F0724003E06B8 /* HotKeyView.swift in Sources */,
+				27C30BAE28026CC20033A51C /* VisualEffectBackground.swift in Sources */,
 				27994FA3266D1E6C00447130 /* AppDelegate.swift in Sources */,
 				27F8556727FBEDE700A00217 /* ModalController.swift in Sources */,
 				27727E4026D9620800EE0EBB /* AppHelper.swift in Sources */,

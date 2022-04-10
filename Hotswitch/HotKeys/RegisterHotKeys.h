@@ -11,7 +11,6 @@
 
 #pragma once
 
-
 @interface HotKeyBridge : NSObject
 
 @property NSString* appName;
@@ -25,6 +24,7 @@
 @protocol HotKeysRegistrarDelegate
 
 - (void) onHotKeyDown:(HotKeyBridge*)hotKey;
+- (void) onHotKeyUp;
 
 @end
 
@@ -36,6 +36,7 @@
 
 - (void)syncHotKeys:(NSArray*)hotKeys;
 - (void)handleKeyDown:(EventRef)anEvent;
+- (void)handleKeyUp;
 
 @end
 
