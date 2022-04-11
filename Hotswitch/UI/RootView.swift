@@ -9,9 +9,11 @@ import SwiftUI
 
 struct RootView: View {
   @State var configSlotID = -1
-  @State var showingAboutView = false
+  @State var showingAboutSheet = false
+  @State var showingPreferencesSheet = false
   @State var showConfigureHelp = false
   @State var showHotkeyHelp = false
+  let popoverPub = NotificationCenter.default.publisher(for: .popoverClosed)
   
   var body: some View {
     let onHotkeyGrid = configSlotID < 0
@@ -44,8 +46,12 @@ struct RootView: View {
           }
         
         Menu {
+          Button("Preferences...", action: {
+            showingPreferencesSheet = true
+          })
+          Divider()
           Button("About", action: {
-            showingAboutView = true
+            showingAboutSheet = true
           })
           Button(action: {
             NSApp.terminate(nil)
@@ -70,10 +76,18 @@ struct RootView: View {
         })
       }
     }
-    .sheet(isPresented: $showingAboutView) {
+    .sheet(isPresented: $showingAboutSheet) {
       AboutView() {
-        showingAboutView.toggle()
+        showingAboutSheet.toggle()
       }
+    }
+    .sheet(isPresented: $showingPreferencesSheet) {
+      PreferencesView() {
+        showingPreferencesSheet.toggle()
+      }
+    }.onReceive(popoverPub) { _ in
+      showingPreferencesSheet = false
+      showingAboutSheet = false
     }
   }
 }

@@ -16,7 +16,7 @@ struct ActiveConfigSlotIDInfo : Identifiable {
 
 struct HotKeyGrid: View {
   @Binding var slotID : Int
-  @EnvironmentObject var hotkeyModel: HotKeyModel
+  @EnvironmentObject var model: HotKeyModel
   
   let columns = [
     GridItem(.adaptive(minimum: 120))
@@ -25,7 +25,7 @@ struct HotKeyGrid: View {
   var body: some View {
     VStack(spacing: 0) {
       LazyVGrid(columns: columns) {
-        ForEach(hotkeyModel.hotKeys, id: \.self) { hotKey in
+        ForEach(model.hotKeys, id: \.self) { hotKey in
           Button(action: {
             slotID = Int(hotKey.slotID)
           } , label: {

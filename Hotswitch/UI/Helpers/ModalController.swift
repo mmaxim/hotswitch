@@ -10,7 +10,7 @@ import Cocoa
 import SwiftUI
 
 class ModalController<Content: View>: NSWindowController, NSWindowDelegate {
-  init(width: Int, height: Int, @ViewBuilder content: @escaping () -> Content) {
+  init(width: Int, height: Int, title: String, @ViewBuilder content: @escaping () -> Content) {
     let mainView = content()
     let window = NSWindow(
       contentRect: CGRect(x: 0, y: 0, width: width, height: height),
@@ -22,12 +22,13 @@ class ModalController<Content: View>: NSWindowController, NSWindowDelegate {
     window.contentView = hosting
     super.init(window: window)
     window.delegate = self
+    window.title = title
   }
   required init?(coder: NSCoder) {
     super.init(coder: coder)
   }
   func windowDidBecomeKey(_ notification: Notification) {
-    window?.level = .statusBar
+    window?.level = .modalPanel
   }
   func windowWillClose(_ notification: Notification) {
     NSApp.stopModal()

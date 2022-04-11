@@ -13,7 +13,6 @@ struct GlobalConfigView: View {
       .frame(maxWidth: .infinity)
       .background(Color.clear)
       .foregroundColor(Color.white)
-      //.background(VisualEffectView(material: NSVisualEffectView.Material.hudWindow, blendingMode: NSVisualEffectView.BlendingMode.behindWindow))
   }
 }
 

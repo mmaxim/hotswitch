@@ -20,9 +20,12 @@
 		27994FAD266D1E6D00447130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27994FAB266D1E6D00447130 /* Main.storyboard */; };
 		27994FB7266DB61500447130 /* RegisterHotKeys.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27994FB6266DB61500447130 /* RegisterHotKeys.mm */; };
 		27994FBB266DB80D00447130 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27994FBA266DB80D00447130 /* Carbon.framework */; };
-		279B017326D810A0003711AF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B017226D810A0003711AF /* Model.swift */; };
+		279B017326D810A0003711AF /* HotkeyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B017226D810A0003711AF /* HotkeyModel.swift */; };
 		279B017626D811EE003711AF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B017526D811EE003711AF /* Persistence.swift */; };
-		27C30BAE28026CC20033A51C /* VisualEffectBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C30BAD28026CC20033A51C /* VisualEffectBackground.swift */; };
+		27C30BB0280351A30033A51C /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C30BAF280351A30033A51C /* PreferencesView.swift */; };
+		27C30BB228035E730033A51C /* ImageTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C30BB128035E730033A51C /* ImageTabView.swift */; };
+		27C30BB42803B8270033A51C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C30BB32803B8270033A51C /* Notifications.swift */; };
+		27C30BB62803D15D0033A51C /* UsageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C30BB52803D15D0033A51C /* UsageModel.swift */; };
 		27EB670A2802637B0026340F /* GlobalConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EB67092802637B0026340F /* GlobalConfigView.swift */; };
 		27F8556027FBCC9D00A00217 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8555F27FBCC9D00A00217 /* StatusBarController.swift */; };
 		27F8556427FBE63F00A00217 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8556327FBE63F00A00217 /* AboutView.swift */; };
@@ -50,9 +53,12 @@
 		27994FB6266DB61500447130 /* RegisterHotKeys.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RegisterHotKeys.mm; sourceTree = "<group>"; };
 		27994FB8266DB62700447130 /* RegisterHotKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterHotKeys.h; sourceTree = "<group>"; };
 		27994FBA266DB80D00447130 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		279B017226D810A0003711AF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		279B017226D810A0003711AF /* HotkeyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyModel.swift; sourceTree = "<group>"; };
 		279B017526D811EE003711AF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		27C30BAD28026CC20033A51C /* VisualEffectBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBackground.swift; sourceTree = "<group>"; };
+		27C30BAF280351A30033A51C /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		27C30BB128035E730033A51C /* ImageTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTabView.swift; sourceTree = "<group>"; };
+		27C30BB32803B8270033A51C /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		27C30BB52803D15D0033A51C /* UsageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageModel.swift; sourceTree = "<group>"; };
 		27EB67092802637B0026340F /* GlobalConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConfigView.swift; sourceTree = "<group>"; };
 		27F8555F27FBCC9D00A00217 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		27F8556327FBE63F00A00217 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 				27994FA2266D1E6C00447130 /* AppDelegate.swift */,
 				27727E3F26D9620800EE0EBB /* AppHelper.swift */,
 				27F8558C27FE30BC00A00217 /* HelpView.swift */,
+				27C30BB32803B8270033A51C /* Notifications.swift */,
 				27F8558827FD2E5800A00217 /* RootView.swift */,
 				27F8555F27FBCC9D00A00217 /* StatusBarController.swift */,
 				27727E3826D95CEE00EE0EBB /* Config */,
@@ -105,6 +112,7 @@
 				27727E3B26D95D6600EE0EBB /* AppConfigView.swift */,
 				27727E3D26D95D7600EE0EBB /* HotKeyConfigView.swift */,
 				27EB67092802637B0026340F /* GlobalConfigView.swift */,
+				27C30BAF280351A30033A51C /* PreferencesView.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -161,8 +169,9 @@
 		279B017126D8108F003711AF /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				279B017226D810A0003711AF /* Model.swift */,
+				279B017226D810A0003711AF /* HotkeyModel.swift */,
 				279B017526D811EE003711AF /* Persistence.swift */,
+				27C30BB52803D15D0033A51C /* UsageModel.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -179,10 +188,10 @@
 		27F8556527FBEDD000A00217 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				27727E4126D9DB5500EE0EBB /* TextFieldDebounced.swift */,
-				27F8556627FBEDE700A00217 /* ModalController.swift */,
+				27C30BB128035E730033A51C /* ImageTabView.swift */,
 				27F8558A27FE207700A00217 /* LegacyTextField.swift */,
-				27C30BAD28026CC20033A51C /* VisualEffectBackground.swift */,
+				27F8556627FBEDE700A00217 /* ModalController.swift */,
+				27727E4126D9DB5500EE0EBB /* TextFieldDebounced.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -258,10 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C30BB0280351A30033A51C /* PreferencesView.swift in Sources */,
 				27727E3C26D95D6600EE0EBB /* AppConfigView.swift in Sources */,
 				27F8556027FBCC9D00A00217 /* StatusBarController.swift in Sources */,
 				27727E4226D9DB5500EE0EBB /* TextFieldDebounced.swift in Sources */,
-				279B017326D810A0003711AF /* Model.swift in Sources */,
+				279B017326D810A0003711AF /* HotkeyModel.swift in Sources */,
 				27F8556427FBE63F00A00217 /* AboutView.swift in Sources */,
 				27EB670A2802637B0026340F /* GlobalConfigView.swift in Sources */,
 				279B017626D811EE003711AF /* Persistence.swift in Sources */,
@@ -270,8 +280,10 @@
 				27994FB7266DB61500447130 /* RegisterHotKeys.mm in Sources */,
 				273EA413266F0F67003E06B8 /* HotKeyGridView.swift in Sources */,
 				273EA40B266F0724003E06B8 /* HotKeyView.swift in Sources */,
-				27C30BAE28026CC20033A51C /* VisualEffectBackground.swift in Sources */,
 				27994FA3266D1E6C00447130 /* AppDelegate.swift in Sources */,
+				27C30BB228035E730033A51C /* ImageTabView.swift in Sources */,
+				27C30BB62803D15D0033A51C /* UsageModel.swift in Sources */,
+				27C30BB42803B8270033A51C /* Notifications.swift in Sources */,
 				27F8556727FBEDE700A00217 /* ModalController.swift in Sources */,
 				27727E4026D9620800EE0EBB /* AppHelper.swift in Sources */,
 				273EA416266F0FD7003E06B8 /* Config.xcdatamodeld in Sources */,

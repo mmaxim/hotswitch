@@ -54,6 +54,7 @@ class StatusBarController {
   
   func hidePopover(_ sender: Any) {
     popover.performClose(sender)
+    NotificationCenter.default.post(name: .popoverClosed,object: nil)
     stopMonitor()
   }
   
@@ -63,4 +64,10 @@ class StatusBarController {
       monitor = nil
     }
   }
+  
+  @objc
+  func preferencesModalOpened(_ notification: Notification) {
+    hidePopover(notification)
+  }
+  
 }

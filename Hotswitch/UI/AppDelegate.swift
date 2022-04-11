@@ -11,7 +11,7 @@ import Carbon
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
-  var hotkeyModel = HotKeyModel()
+  var model = HotKeyModel()
   var statusBar : StatusBarController?
   var popover = NSPopover()
   var configWindows : [NSWindow] = []
@@ -19,10 +19,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     let mainView = RootView()
       .background(Color(NSColor.windowBackgroundColor))
-      .environmentObject(hotkeyModel)
+      .environmentObject(model)
     
     HotKeysRegistrar.shared().delegate = self
-    HotKeysRegistrar.shared().syncHotKeys(hotkeyModel.getHotKeysForBridge())
+    HotKeysRegistrar.shared().syncHotKeys(model.getHotKeysForBridge())
     
     NSEvent.addGlobalMonitorForEvents(matching: [.flagsChanged]) {
       switch $0.modifierFlags.intersection(.deviceIndependentFlagsMask) {
@@ -80,7 +80,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
     configWindows.append(window)
     
     let view = NSHostingView(rootView: GlobalConfigView()
-      .environmentObject(hotkeyModel))
+      .environmentObject(model))
     window.contentView = view
   }
   
@@ -105,6 +105,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, HotKeysRegistrarDelegate {
         NSWorkspace.shared.openApplication(at: url!,
                                            configuration: configuration,
                                            completionHandler: nil)
+        UsageData.shared.appUsed(name!)
         break
       }
     }
