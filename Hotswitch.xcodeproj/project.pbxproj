@@ -26,6 +26,7 @@
 		27C30BB228035E730033A51C /* ImageTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C30BB128035E730033A51C /* ImageTabView.swift */; };
 		27C30BB42803B8270033A51C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C30BB32803B8270033A51C /* Notifications.swift */; };
 		27C30BB62803D15D0033A51C /* UsageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C30BB52803D15D0033A51C /* UsageModel.swift */; };
+		27C30BBA280520EC0033A51C /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C30BB9280520EC0033A51C /* PieChartView.swift */; };
 		27EB670A2802637B0026340F /* GlobalConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EB67092802637B0026340F /* GlobalConfigView.swift */; };
 		27F8556027FBCC9D00A00217 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8555F27FBCC9D00A00217 /* StatusBarController.swift */; };
 		27F8556427FBE63F00A00217 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8556327FBE63F00A00217 /* AboutView.swift */; };
@@ -59,6 +60,7 @@
 		27C30BB128035E730033A51C /* ImageTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTabView.swift; sourceTree = "<group>"; };
 		27C30BB32803B8270033A51C /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		27C30BB52803D15D0033A51C /* UsageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageModel.swift; sourceTree = "<group>"; };
+		27C30BB9280520EC0033A51C /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		27EB67092802637B0026340F /* GlobalConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConfigView.swift; sourceTree = "<group>"; };
 		27F8555F27FBCC9D00A00217 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		27F8556327FBE63F00A00217 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				27C30BB128035E730033A51C /* ImageTabView.swift */,
 				27F8558A27FE207700A00217 /* LegacyTextField.swift */,
 				27F8556627FBEDE700A00217 /* ModalController.swift */,
+				27C30BB9280520EC0033A51C /* PieChartView.swift */,
 				27727E4126D9DB5500EE0EBB /* TextFieldDebounced.swift */,
 			);
 			path = Helpers;
@@ -275,6 +278,7 @@
 				27F8556427FBE63F00A00217 /* AboutView.swift in Sources */,
 				27EB670A2802637B0026340F /* GlobalConfigView.swift in Sources */,
 				279B017626D811EE003711AF /* Persistence.swift in Sources */,
+				27C30BBA280520EC0033A51C /* PieChartView.swift in Sources */,
 				27F8558D27FE30BC00A00217 /* HelpView.swift in Sources */,
 				27727E3E26D95D7600EE0EBB /* HotKeyConfigView.swift in Sources */,
 				27994FB7266DB61500447130 /* RegisterHotKeys.mm in Sources */,

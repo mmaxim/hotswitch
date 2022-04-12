@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RootView: View {
   @State var configSlotID = -1
-  @State var showingAboutSheet = false
   @State var showingPreferencesSheet = false
   @State var showConfigureHelp = false
   @State var showHotkeyHelp = false
@@ -45,26 +44,13 @@ struct RootView: View {
               .padding()
           }
         
-        Menu {
-          Button("Preferences...", action: {
-            showingPreferencesSheet = true
-          })
-          Divider()
-          Button("About", action: {
-            showingAboutSheet = true
-          })
-          Button(action: {
-            NSApp.terminate(nil)
-          }) {
-            Label("Quit", systemImage: "")
-          }
-        } label: {
+        Button(action: {
+          showingPreferencesSheet = true
+        }, label: {
           Image(systemName: "gearshape")
-        }
-        .menuStyle(BorderlessButtonMenuStyle(showsMenuIndicator: true))
-        .padding(.horizontal)
-        .fixedSize()
-        .frame(maxWidth: .infinity, alignment: .trailing)
+        }).buttonStyle(PlainButtonStyle())
+          .frame(maxWidth: .infinity, alignment: .trailing)
+          .padding(.horizontal)
       }
       .background(Color(NSColor.controlBackgroundColor))
       .frame(maxWidth: .infinity)
@@ -76,18 +62,12 @@ struct RootView: View {
         })
       }
     }
-    .sheet(isPresented: $showingAboutSheet) {
-      AboutView() {
-        showingAboutSheet.toggle()
-      }
-    }
     .sheet(isPresented: $showingPreferencesSheet) {
       PreferencesView() {
         showingPreferencesSheet.toggle()
       }
     }.onReceive(popoverPub) { _ in
       showingPreferencesSheet = false
-      showingAboutSheet = false
     }
   }
 }

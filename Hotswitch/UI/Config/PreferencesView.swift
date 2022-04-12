@@ -19,6 +19,10 @@ struct GeneralPrefsView : View {
         Text("Right Shift Key")
       }
       .frame(width: 300)
+      Spacer()
+      Button("Quit Hotswitch") {
+        exit(EXIT_SUCCESS)
+      }
     }.frame(maxWidth: .infinity)
       .padding()
   }
@@ -26,10 +30,16 @@ struct GeneralPrefsView : View {
 
 struct UsagePrefsView : View {
   var body: some View {
-    List {
-      ForEach(UsageData.shared.getUsageStats(), id: \.self) { usage in
-        Text(String(format: "%@: %d", usage.name, usage.count))
+    let stats = UsageData.shared.getUsageStats()
+    HStack {
+      List {
+        ForEach(stats, id: \.self) { usage in
+          Text(String(format: "%@: %d", usage.name, usage.count))
+          
+        }
       }
+      PieChart(data: stats.map({Double($0.count)}))
+        .padding()
     }
   }
 }
@@ -47,10 +57,12 @@ struct PreferencesView: View {
       ImageTabView(
         buttonConfig: [ImageTabButtonConfig(caption: "General", systemImageName: "gearshape"),
                        ImageTabButtonConfig(caption: "Usage", systemImageName: "chart.pie"),
-                       ImageTabButtonConfig(caption: "Purchase", systemImageName: "cart")],
+                       ImageTabButtonConfig(caption: "Purchase", systemImageName: "cart"),
+                       ImageTabButtonConfig(caption: "About", systemImageName: "info.circle")],
         views: [{ AnyView(GeneralPrefsView()) },
                 { AnyView(UsagePrefsView())},
-                { AnyView(PurchasePrefsView())}])
+                { AnyView(PurchasePrefsView())},
+                { AnyView(AboutView())}])
       .frame(maxHeight: .infinity, alignment: .top)
       VStack(alignment: .leading) {
         Divider()

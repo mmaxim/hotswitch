@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AboutView: View {
-  var close: () -> ()
   var body: some View {
     VStack(alignment: .trailing){
       HStack(spacing: 24) {
@@ -25,7 +24,6 @@ struct AboutView: View {
           Link("Mike Maxim", destination: URL(string: "https://github.com/mmaxim")!)
         }
       }
-      Button("Got it!", action: close)
     }
     .padding()
     .frame(minWidth: 400)
@@ -34,6 +32,6 @@ struct AboutView: View {
 
 struct AboutView_Previews: PreviewProvider {
   static var previews: some View {
-    AboutView(close: {})
+    AboutView()
   }
 }
