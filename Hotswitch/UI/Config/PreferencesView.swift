@@ -32,15 +32,17 @@ struct UsagePrefsView : View {
   var body: some View {
     let stats = UsageData.shared.getUsageStats()
     HStack {
-      List {
-        ForEach(stats, id: \.self) { usage in
-          Text(String(format: "%@: %d", usage.name, usage.count))
-          
+      Table(stats) {
+        TableColumn("App", value: \.name)
+        TableColumn("Uses") { usage in
+          Text(String(usage.count))
         }
       }
-      PieChart(data: stats.map({Double($0.count)}))
-        .padding()
+      PieChart(data: stats.map({ usage in
+        PieData(label: usage.name, value: Double(usage.count))
+      }))
     }
+    .padding()
   }
 }
           
@@ -52,6 +54,7 @@ struct PurchasePrefsView : View {
 
 struct PreferencesView: View {
   var close: (() -> ())?
+  var selectedIndex = 0
   var body: some View {
     VStack(alignment: .leading) {
       ImageTabView(
@@ -75,7 +78,7 @@ struct PreferencesView: View {
         .padding(.bottom, 8)
       }
     }
-    .frame(width: 450, height: 300, alignment: .top)
+    .frame(width: 550, height: 325, alignment: .top)
     .padding(.top, 8)
   }
 }

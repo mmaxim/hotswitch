@@ -7,9 +7,14 @@
 
 import Foundation
 
-struct AppUsage : Hashable {
+struct AppUsage : Hashable, Identifiable {
+  
   var name : String
   var count: Int
+  
+  var id : String {
+    name
+  }
 }
 
 class UsageData : NSObject {
@@ -48,6 +53,9 @@ class UsageData : NSObject {
     ]
     usageFetchRequest.resultType = .dictionaryResultType
     usageFetchRequest.returnsObjectsAsFaults = false
+    usageFetchRequest.sortDescriptors = [
+      NSSortDescriptor(key: "count", ascending: false)
+    ]
     
     var ret : [AppUsage] = []
     let res = try! context.fetch(usageFetchRequest)
