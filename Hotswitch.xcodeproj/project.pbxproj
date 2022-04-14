@@ -116,6 +116,7 @@
 				27727E3B26D95D6600EE0EBB /* AppConfigView.swift */,
 				27727E3D26D95D7600EE0EBB /* HotKeyConfigView.swift */,
 				27EB67092802637B0026340F /* GlobalConfigView.swift */,
+				27C30BB9280520EC0033A51C /* PieChartView.swift */,
 				27C30BAF280351A30033A51C /* PreferencesView.swift */,
 			);
 			path = Config;
@@ -195,7 +196,6 @@
 				27C30BB128035E730033A51C /* ImageTabView.swift */,
 				27F8558A27FE207700A00217 /* LegacyTextField.swift */,
 				27F8556627FBEDE700A00217 /* ModalController.swift */,
-				27C30BB9280520EC0033A51C /* PieChartView.swift */,
 				27727E4126D9DB5500EE0EBB /* TextFieldDebounced.swift */,
 				27C30BBB2806604F0033A51C /* TrackingView.swift */,
 			);
