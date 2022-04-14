@@ -137,7 +137,6 @@ struct PieChart: View {
   var body: some View {
     GeometryReader { geometry in
       let frame = geometry.frame(in: .global)
-      let _ = print(frame)
       let width = geometry.size.width * 0.95
       let height = geometry.size.height * 0.95
       let center = CGPoint(x: geometry.size.width / 2.0, y: geometry.size.height / 2.0)
