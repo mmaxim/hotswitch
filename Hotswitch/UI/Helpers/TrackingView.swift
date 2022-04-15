@@ -36,7 +36,6 @@ struct TrackingAreaRepresentable<Content>: NSViewRepresentable where Content: Vi
   }
   
   func updateNSView(_ nsView: NSHostingView<Content>, context: Context) {
-    
     nsView.rootView = self.content()
   }
 }
