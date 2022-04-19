@@ -19,19 +19,31 @@ private struct PieChartSlice : View {
   var endAngle: Angle
   var color: Color
   var sliceMode : SliceMode
+  @State var rotationAngle = Angle(radians: 0)
+  @State var showStroke = false
   
   var body: some View {
     let path = Path { path in
-      path.addArc(center: center, radius: radius, startAngle: startAngle,
-                  endAngle: endAngle, clockwise: false)
+      path.addArc(center: center, radius: radius, startAngle: Angle(radians: 0),
+                  endAngle: (endAngle - startAngle), clockwise: false)
       path.addLine(to: center)
     }
+    var ret : AnyView
     switch (sliceMode) {
     case .fill:
-      return AnyView(path.fill(color))
+      ret = AnyView(path.fill(color))
     case .stroke:
-      return AnyView(path.stroke(color, lineWidth: 1))
+      ret = AnyView(path.stroke(showStroke ? color : Color.clear, lineWidth: 1))
     }
+    return ret
+      .onAppear {
+        self.rotationAngle = startAngle
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+          self.showStroke = true
+        }
+      }
+      .rotationEffect(rotationAngle)
+      .animation(.easeInOut(duration: 0.5), value: rotationAngle)
   }
 }
 
@@ -85,6 +97,7 @@ struct PieData {
 struct PieChart: View {
   var data: [PieData]
   @State private var hoverInfo : SliceHoverInfo?
+  @State private var rotationAngle = 0.0
   
   private func sumData() -> Double {
     data.reduce(0, { $0 + $1.value })
@@ -136,7 +149,6 @@ struct PieChart: View {
   
   var body: some View {
     GeometryReader { geometry in
-      let frame = geometry.frame(in: .global)
       let width = geometry.size.width * 0.95
       let height = geometry.size.height * 0.95
       let center = CGPoint(x: geometry.size.width / 2.0, y: geometry.size.height / 2.0)
@@ -147,6 +159,7 @@ struct PieChart: View {
           let spec = specs[index]
           PieChartSlice(center: center, radius: radius, startAngle: spec.startAngle, endAngle: spec.endAngle,
                         color: sliceColors[index], sliceMode: .fill)
+     
         }
         ForEach(0..<specs.count, id: \.self) { index in
           let spec = specs[index]
@@ -160,7 +173,6 @@ struct PieChart: View {
       .trackingMouse(onMove: {
         hoverInfo = hoverInfoFromMouse(mouse: $0, center: center, radius: radius)
       })
-      
     }
   }
 }
