@@ -21,14 +21,14 @@ struct ImageTabViewButton : View {
       Text(caption)
         .font(.subheadline)
     }
-    .foregroundColor(isSelected ? Color(NSColor.selectedContentBackgroundColor) : Color(NSColor.secondaryLabelColor.cgColor))
+    .foregroundColor(isSelected ? Color(NSColor.selectedContentBackgroundColor) : Color(NSColor.secondaryLabelColor))
     .onHover { active in
       hovered = active
     }
     .padding(.top, 10)
     .padding(.bottom, 4)
     .padding(.horizontal, 10)
-    .background(hovered ? Color(NSColor.quaternaryLabelColor.cgColor) : Color.clear)
+    .background(hovered ? Color(NSColor.quaternaryLabelColor) : Color.clear)
     .cornerRadius(8)
   }
 }
@@ -53,6 +53,7 @@ struct ImageTabView : View  {
   var buttonConfig : [ImageTabButtonConfig]
   var views : [() -> AnyView]
   @State var selectedIndex = 0
+  @Environment(\.colorScheme) private var colorScheme
   
   init(buttonConfig: [ImageTabButtonConfig], views: [() -> AnyView]) {
     self.buttonConfig = buttonConfig

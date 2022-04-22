@@ -17,10 +17,10 @@ class StatusBarController {
   init(_ popover: NSPopover) {
     self.popover = popover
     statusBar = NSStatusBar()
-    statusItem = statusBar.statusItem(withLength: 32.0)
+    statusItem = statusBar.statusItem(withLength: 32)
     
     if let statusBarButton = statusItem.button {
-      statusBarButton.image = NSApp.applicationIconImage
+      statusBarButton.image = NSImage(named: NSImage.Name("statusbar64"))
       statusBarButton.image?.size = NSSize(width: 32.0, height: 32.0)
       statusBarButton.image?.isTemplate = true
       
