@@ -19,11 +19,11 @@ class HotKeyModel : NSObject, ObservableObject {
   
   func load() {
     let context = PersistenceController.shared.container.viewContext
-    let hotkeyFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "HotKey")
+    let hotkeyFetchRequest : NSFetchRequest<HotKey> = HotKey.fetchRequest()
     hotkeyFetchRequest.sortDescriptors = [
       NSSortDescriptor(keyPath: \HotKey.slotID, ascending: true)
     ]
-    self.hotKeys = try! context.fetch(hotkeyFetchRequest) as! [HotKey]
+    self.hotKeys = try? context.fetch(hotkeyFetchRequest)
     
     // make empty slots to get up to desired number of slots
     let sz = self.hotKeys.count

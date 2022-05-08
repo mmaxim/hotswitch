@@ -29,17 +29,26 @@ struct GeneralPrefsView : View {
 }
 
 struct UsagePrefsView : View {
+  @State var selectedUsageDays : Int = 5
   var body: some View {
-    let stats = UsageData.shared.getUsageStats()
+    let stats = UsageData.shared.getUsageStats(daysAgo: selectedUsageDays)
     HStack {
-      Table(stats) {
-        TableColumn("App", value: \.name)
-        TableColumn("Uses") { usage in
-          Text(String(usage.count))
+      VStack {
+        Table(stats) {
+          TableColumn("App", value: \.name)
+          TableColumn("Uses") { usage in
+            Text(String(usage.count))
+          }
         }
+        Picker("", selection: $selectedUsageDays) {
+          Text("Last 5 days").tag(5)
+          Text("Last 14 days").tag(14)
+          Text("Alltime").tag(0)
+        }
+        .padding(.horizontal)
       }
-      PieChart(data: stats.map({ usage in
-        PieData(label: usage.name, value: Double(usage.count))
+      PieChart(data: stats.map({
+        PieData(label: $0.name, value: Double($0.count))
       }))
     }
     .padding()
